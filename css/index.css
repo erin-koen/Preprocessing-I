@@ -129,33 +129,63 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  margin: 0 auto;
 }
 html,
 body {
   height: 100%;
   font-family: 'Sarabun', sans-serif;
-  margin: 0 auto;
 }
 .nav-a-borders {
   border-left: 1px solid gray;
-  border-right: 1px solid gray;
   padding: 5px 10px;
 }
+.section-wrapper {
+  padding: 20px;
+  border: 1px dotted black;
+  margin: 10px;
+}
 .container .menu {
-  max-width: 1000px;
+  max-width: ;
   width: 100%;
+  background: lightgray;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px;
+}
+.container .menu img {
+  display: none;
+}
+.container .menu nav {
   display: flex;
   justify-content: flex-end;
 }
-@media (max-width: 800px) {
-  .container .menu {
-    width: 90%;
-    background-color: red;
-  }
-}
 .container .menu a {
   border-left: 1px solid gray;
-  border-right: 1px solid gray;
   padding: 5px 10px;
   text-decoration: none;
+  color: black;
+}
+@media (max-width: 800px) {
+  .container nav {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container img {
+    display: inline;
+  }
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px dotted black;
+  margin: 10px;
+}
+.intro img {
+  width: 48%;
+  height: 48%;
+}
+.intro .intro-copy {
+  width: 48%;
 }

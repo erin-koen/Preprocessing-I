@@ -67,8 +67,14 @@ html, body {
 
 .nav-a-borders {
 	border-left: 1px solid gray;
-	border-right: 1px solid gray;
+	// border-right: 1px solid gray;
 	padding: 5px 10px;
+}
+
+.section-wrapper {
+	padding: 20px;
+	border: 1px dotted black;
+	margin: 10px;
 }
 
 
@@ -79,27 +85,57 @@ html, body {
 .container {
 	
 	.menu {
-	max-width: 1000px;
+	max-width: ;
 	width: 100%;
+	background: lightgray;
 	display: flex;
 	justify-content: flex-end;
+	padding: 5px 10px;
 	// border: 1px solid red;
 		img {
-			display: hidden;
+			display: none;
 		}
-
+		nav {
+			display: flex;
+			justify-content: flex-end;
+		}
 		a {
 			.nav-a-borders;
 			text-decoration: none;
+			color: black;
 		}
 	}
 
-	@media (max-width: 800px){
-		width: 90%;
-		background-color: red;
+		@media (max-width: 800px){
+			nav {
+				justify-content: center;
+				flex-direction: column;
+			}
+			
+			img {
+				display: inline;	
+			}
+				
+			
+		}
+	}	
+
+	.intro {
+		display: flex;
+		justify-content: space-between;
+		.section-wrapper;
+
+		img {
+			width: 48%;
+			height: 48%;
+
+		}
+
+		.intro-copy {
+			width: 48%;
+			
+		}
 	}
 
-	@media (max-width: 500px){
-		width: 
-	}
-}
+
+	
