@@ -283,10 +283,13 @@ body {
 .container .skills-and-contact {
   display: flex;
   justify-content: space-between;
+  padding-right: 20px;
 }
 @media (max-width: 800px) {
   .container .skills-and-contact {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .container .skills-and-contact .skills {
@@ -301,6 +304,10 @@ body {
     width: 100%;
   }
 }
+.container .skills-and-contact .skills h1 {
+  font-weight: bold;
+  text-align: center;
+}
 .container .skills-and-contact .skills li {
   line-height: 150%;
   list-style-type: circle;
@@ -313,6 +320,7 @@ body {
   .container .skills-and-contact .contact {
     width: 100%;
     height: auto;
+    margin-left: 20px;
   }
 }
 .container .skills-and-contact .contact button {
