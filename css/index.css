@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -145,16 +145,20 @@ body {
   border: 1px dotted black;
   margin: 10px;
 }
+.center-ish {
+  justify-content: center;
+  align-content: center;
+}
+.list-format {
+  list-style-type: circle;
+  list-style-position: inside;
+}
 .container .menu {
-  max-width: ;
   width: 100%;
   background: lightgray;
   display: flex;
   justify-content: flex-end;
   padding: 5px 10px;
-}
-.container .menu img {
-  display: none;
 }
 .container .menu nav {
   display: flex;
@@ -175,17 +179,54 @@ body {
     display: inline;
   }
 }
-.intro {
+.container .intro {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border: 10px solid red;
   padding: 20px;
   border: 1px dotted black;
   margin: 10px;
 }
-.intro img {
+@media (max-width: 800px) {
+  .container .intro {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.container .intro img {
   width: 48%;
   height: 48%;
 }
-.intro .intro-copy {
+@media (max-width: 800px) {
+  .container .intro img {
+    width: 96%;
+    height: 96%;
+  }
+}
+.container .intro .intro-copy {
   width: 48%;
+  height: 48%;
+}
+@media (max-width: 800px) {
+  .container .intro .intro-copy {
+    width: 96%;
+    height: 96%;
+    padding-top: 30px;
+  }
+}
+.container .intro .intro-copy p {
+  font-size: 1.8rem;
+  padding-bottom: 10%;
+}
+.container .intro .intro-copy li {
+  line-height: 150%;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.container .work-history {
+  padding: 20px;
+  border: 1px dotted black;
+  margin: 10px;
+  display: flex;
 }

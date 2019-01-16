@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -77,24 +77,32 @@ html, body {
 	margin: 10px;
 }
 
+.center-ish {
+	justify-content: center;
+	align-content: center
+}
+
+.list-format {
+	list-style-type: circle;
+	list-style-position: inside;
+}
 
 
-
-// NAV MENU   //
+// NAV MENU --------------------  
 
 .container {
 	
 	.menu {
-	max-width: ;
+	
 	width: 100%;
 	background: lightgray;
 	display: flex;
 	justify-content: flex-end;
 	padding: 5px 10px;
-	// border: 1px solid red;
-		img {
-			display: none;
-		}
+	@media (max-width: 800px){
+
+	}
+		
 		nav {
 			display: flex;
 			justify-content: flex-end;
@@ -107,6 +115,7 @@ html, body {
 	}
 
 		@media (max-width: 800px){
+			
 			nav {
 				justify-content: center;
 				flex-direction: column;
@@ -117,25 +126,58 @@ html, body {
 			}
 				
 			
-		}
-	}	
+		}	
+
+//INTRO SECTION --------------------
 
 	.intro {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		border: 10px solid red;
 		.section-wrapper;
+
+		@media (max-width: 800px){
+			flex-direction: column;
+			justify-content: center;
+			
+		}
 
 		img {
 			width: 48%;
 			height: 48%;
-
+			@media (max-width: 800px){
+				width: 96%;
+				height: 96%;	
+			}
 		}
 
 		.intro-copy {
 			width: 48%;
+			height: 48%;
+			@media (max-width: 800px){
+				width: 96%;
+				height: 96%;
+				padding-top: 30px;
+			}
+			p {
+				font-size: 1.8rem;
+				padding-bottom: 10%;
+			}
 			
+			li {
+				line-height: 150%;
+				.list-format;
+			}
 		}
 	}
 
+// WORK HISTORY  --------------------
 
-	
+	.work-history{
+		.section-wrapper;
+		display: flex;
+		
+	}
+
+}
