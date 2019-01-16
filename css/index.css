@@ -136,23 +136,6 @@ body {
   height: 100%;
   font-family: 'Sarabun', sans-serif;
 }
-.nav-a-borders {
-  border-left: 1px solid lightgray;
-  padding: 5px 10px;
-}
-.section-wrapper {
-  padding: 20px;
-  border: 1px dotted black;
-  margin: 10px;
-}
-.center-ish {
-  justify-content: center;
-  align-content: center;
-}
-.list-format {
-  list-style-type: circle;
-  list-style-position: inside;
-}
 .container {
   background-color: lightgray;
 }
@@ -224,9 +207,10 @@ body {
   padding-bottom: 10%;
 }
 .container .intro .intro-copy li {
-  line-height: 150%;
   list-style-type: circle;
   list-style-position: inside;
+  line-height: 150%;
+  padding-bottom: 0.8rem;
 }
 .container .work-history {
   padding: 20px;
@@ -275,60 +259,39 @@ body {
 .container .work-history .bullet-points li {
   list-style-type: circle;
   list-style-position: inside;
-  padding-bottom: 0.5rem;
+  line-height: 150%;
+  padding-bottom: 0.8rem;
 }
 .container .work-history .icap {
   padding-top: 2rem;
 }
-.container .skills-and-contact {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 20px;
-}
-@media (max-width: 800px) {
-  .container .skills-and-contact {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.container .skills-and-contact .skills {
-  background-color: whitesmoke;
+.container .skills {
   padding: 20px;
   border: 1px dotted black;
   margin: 10px;
-  width: 70%;
+  background-color: whitesmoke;
 }
-@media (max-width: 800px) {
-  .container .skills-and-contact .skills {
-    width: 100%;
-  }
-}
-.container .skills-and-contact .skills h1 {
+.container .skills h1 {
   font-weight: bold;
   text-align: center;
 }
-.container .skills-and-contact .skills li {
-  line-height: 150%;
+.container .skills li {
   list-style-type: circle;
   list-style-position: inside;
+  line-height: 150%;
+  padding-bottom: 0.8rem;
 }
-.container .skills-and-contact .contact {
-  width: 30%;
-}
-@media (max-width: 800px) {
-  .container .skills-and-contact .contact {
-    width: 100%;
-    height: auto;
-    margin-left: 20px;
-  }
-}
-.container .skills-and-contact .contact button {
-  background-color: whitesmoke;
-  padding: 30px;
-  font-size: 2.5rem;
-  border-radius: 0.5rem;
+.container .contact {
   padding: 20px;
   border: 1px dotted black;
   margin: 10px;
+  background-color: whitesmoke;
+  padding: 0;
+}
+.container .contact button {
+  width: 100%;
+  padding: 3rem;
+  font-size: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: whitesmoke;
 }
