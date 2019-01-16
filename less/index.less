@@ -232,11 +232,19 @@ html, body {
 	.skills-and-contact {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 800px){
+			flex-direction: column;
+		}
+		
 		
 
 		.skills {
+			background-color: @section-color;
 			.section-wrapper;
-			width: 48%;
+			width: 70%;
+			@media (max-width: 800px){
+				width: 100%;
+			}
 			
 			li {
 				line-height: 150%;
@@ -245,8 +253,19 @@ html, body {
 		}
 
 		.contact{
-			.section-wrapper;
-			width: 48%;	
+			width: 30%;
+			@media (max-width: 800px){
+				width: 100%;
+				height: auto;
+			}
+			button {
+				background-color: @section-color;
+				
+				padding: 30px;
+				font-size: 2.5rem;
+				border-radius: .5rem;
+				.section-wrapper
+			}
 		}
 	}
 
