@@ -137,7 +137,7 @@ body {
   font-family: 'Sarabun', sans-serif;
 }
 .nav-a-borders {
-  border-left: 1px solid gray;
+  border-left: 1px solid lightgray;
   padding: 5px 10px;
 }
 .section-wrapper {
@@ -153,9 +153,12 @@ body {
   list-style-type: circle;
   list-style-position: inside;
 }
+.container {
+  background-color: lightgray;
+}
 .container .menu {
+  background-color: whitesmoke;
   width: 100%;
-  background: lightgray;
   display: flex;
   justify-content: flex-end;
   padding: 5px 10px;
@@ -165,7 +168,7 @@ body {
   justify-content: flex-end;
 }
 .container .menu a {
-  border-left: 1px solid gray;
+  border-left: 1px solid lightgray;
   padding: 5px 10px;
   text-decoration: none;
   color: black;
@@ -180,6 +183,7 @@ body {
   }
 }
 .container .intro {
+  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -230,11 +234,11 @@ body {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  background-color: whitesmoke;
 }
 .container .work-history .job {
   display: flex;
   flex-direction: row;
-  padding-bottom: 2rem;
 }
 @media (max-width: 800px) {
   .container .work-history .job {
@@ -249,17 +253,51 @@ body {
   align-items: center;
   padding: 0 20px 10px 0;
 }
+@media (max-width: 800px) {
+  .container .work-history .job .co-and-date {
+    width: 100%;
+  }
+}
 .container .work-history .job .co-and-date h2 {
   font-weight: bold;
 }
 .container .work-history .job .co-and-date h3 {
   font-style: italic;
 }
-.container .work-history .job .bullet-points {
+.container .work-history .bullet-points {
   width: 70%;
 }
-.container .work-history .job .bullet-points li {
+@media (max-width: 800px) {
+  .container .work-history .bullet-points {
+    width: 100%;
+  }
+}
+.container .work-history .bullet-points li {
   list-style-type: circle;
   list-style-position: inside;
   padding-bottom: 0.5rem;
+}
+.container .work-history .icap {
+  padding-top: 2rem;
+}
+.container .skills-and-contact {
+  display: flex;
+  justify-content: space-between;
+}
+.container .skills-and-contact .skills {
+  padding: 20px;
+  border: 1px dotted black;
+  margin: 10px;
+  width: 48%;
+}
+.container .skills-and-contact .skills li {
+  line-height: 150%;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.container .skills-and-contact .contact {
+  padding: 20px;
+  border: 1px dotted black;
+  margin: 10px;
+  width: 48%;
 }
