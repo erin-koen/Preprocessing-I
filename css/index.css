@@ -229,4 +229,37 @@ body {
   border: 1px dotted black;
   margin: 10px;
   display: flex;
+  flex-direction: column;
+}
+.container .work-history .job {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2rem;
+}
+@media (max-width: 800px) {
+  .container .work-history .job {
+    flex-direction: column;
+  }
+}
+.container .work-history .job .co-and-date {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 10px 0;
+}
+.container .work-history .job .co-and-date h2 {
+  font-weight: bold;
+}
+.container .work-history .job .co-and-date h3 {
+  font-style: italic;
+}
+.container .work-history .job .bullet-points {
+  width: 70%;
+}
+.container .work-history .job .bullet-points li {
+  list-style-type: circle;
+  list-style-position: inside;
+  padding-bottom: 0.5rem;
 }
