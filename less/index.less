@@ -50,11 +50,56 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
 }
 
 html, body {
 	height: 100%;
-	background-color: red;
+	font-family: 'Sarabun', sans-serif;
+	
+}
+// VARIABLES
+
+
+
+// MIXINS
+
+.nav-a-borders {
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	padding: 5px 10px;
 }
 
+
+
+
+// NAV MENU   //
+
+.container {
+	
+	.menu {
+	max-width: 1000px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	// border: 1px solid red;
+		img {
+			display: hidden;
+		}
+
+		a {
+			.nav-a-borders;
+			text-decoration: none;
+		}
+	}
+
+	@media (max-width: 800px){
+		width: 90%;
+		background-color: red;
+	}
+
+	@media (max-width: 500px){
+		width: 
+	}
+}
