@@ -64,6 +64,8 @@ html, body {
 @boring-color: lightgray;
 @section-color: whitesmoke;
 @snazzy-color: red;
+@company-name-size: 1.75rem;
+@role-name-size: 1.25rem;
 
 // MIXINS
 
@@ -152,6 +154,7 @@ html, body {
 		img {
 			width: 48%;
 			height: 48%;
+			
 			@media (max-width: 800px){
 				width: 96%;
 				height: 96%;	
@@ -205,10 +208,15 @@ html, body {
 
 				h2 {
 					font-weight: bold; 
+					font-size: @company-name-size;
+					text-align: center;
+					padding-bottom: 1.25rem;
 				}
 				
 				h3 {
 					font-style: italic;
+					font-size: @role-name-size;
+					text-align: center; 
 				}
 			}
 			

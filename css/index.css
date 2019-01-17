@@ -244,9 +244,14 @@ body {
 }
 .container .work-history .job .co-and-date h2 {
   font-weight: bold;
+  font-size: 1.75rem;
+  text-align: center;
+  padding-bottom: 1.25rem;
 }
 .container .work-history .job .co-and-date h3 {
   font-style: italic;
+  font-size: 1.25rem;
+  text-align: center;
 }
 .container .work-history .bullet-points {
   width: 70%;
