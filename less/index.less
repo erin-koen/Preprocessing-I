@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -50,10 +50,219 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Sarabun', sans-serif;
+	
 }
+// VARIABLES
+
+@boring-color: lightgray;
+@section-color: whitesmoke;
+@snazzy-color: red;
+@company-name-size: 1.75rem;
+@role-name-size: 1.25rem;
+
+// MIXINS
+
+.nav-a-borders (){
+	border-left: 1px solid @boring-color;
+	// border-right: 1px solid gray;
+	padding: 5px 10px;
+}
+
+.section-wrapper (){
+	padding: 20px;
+	border: 1px dotted black;
+	margin: 10px;
+}
+
+.center-ish () {
+	justify-content: center;
+	align-content: center
+}
+
+.list-format () {
+	list-style-type: circle;
+	list-style-position: inside;
+	line-height: 150%;
+	padding-bottom: .80rem;
+}
+
+
+
+
+.container {
+	background-color: @boring-color;
+
+// NAVIGATION AND MENU AND SHOULD BE A PICTURE OR SOMETHING	
+	.menu {
+	background-color: @section-color;
+	width: 100%;
+	
+	display: flex;
+	justify-content: flex-end;
+	padding: 5px 10px;
+	@media (max-width: 800px){
+
+	}
+		
+		nav {
+			display: flex;
+			justify-content: flex-end;
+		}
+		a {
+			.nav-a-borders;
+			text-decoration: none;
+			color: black;
+		}
+	}
+
+		@media (max-width: 800px){
+			
+			nav {
+				justify-content: center;
+				flex-direction: column;
+			}
+			
+			img {
+				display: inline;	
+			}
+				
+			
+		}	
+
+//INTRO SECTION --------------------
+
+	.intro {
+		background-color: @section-color;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 10px solid red;
+		.section-wrapper;
+
+		@media (max-width: 800px){
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		img {
+			width: 48%;
+			height: 48%;
+			
+			@media (max-width: 800px){
+				width: 96%;
+				height: 96%;	
+			}
+		}
+
+		.intro-copy {
+			width: 48%;
+			height: 48%;
+			@media (max-width: 800px){
+				width: 96%;
+				height: 96%;
+				padding-top: 30px;
+			}
+			p {
+				font-size: 1.8rem;
+				padding-bottom: 10%;
+			}
+			
+			li {
+				.list-format;
+			}
+		}
+	}
+
+// WORK HISTORY  --------------------
+
+	.work-history{
+		.section-wrapper;
+		display: flex;
+		flex-direction: column;
+		background-color: @section-color;
+
+		.job {
+			display: flex;
+			flex-direction: row;
+			@media (max-width: 800px){
+				flex-direction:column;
+			}
+
+			.co-and-date {
+				width: 30%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 0 20px 10px 0;
+				@media (max-width: 800px){
+					width:100%;
+				}
+
+				h2 {
+					font-weight: bold; 
+					font-size: @company-name-size;
+					text-align: center;
+					padding-bottom: 1.25rem;
+				}
+				
+				h3 {
+					font-style: italic;
+					font-size: @role-name-size;
+					text-align: center; 
+				}
+			}
+			
+			}
+			.bullet-points {
+				width: 70%;
+				@media (max-width: 800px){
+					width: 100%;
+				}
+				li {
+					.list-format;
+				}
+			}
+		.icap {
+			padding-top: 2rem;	
+		}
+		
+	}
+
+// Contact Section -------------
+	.skills {
+		.section-wrapper;
+		background-color: @section-color;
+		
+		h1 {
+			font-weight: bold;
+			text-align: center;
+		}
+		li {
+			.list-format;
+		}
+	}
+	
+
+	.contact{
+		.section-wrapper();
+		background-color: @section-color;
+		padding: 0;
+		button {
+			width: 100%;
+			padding: 3rem;
+			font-size: 2.5rem;
+			border-radius: .5rem;
+			background-color: @section-color;
+		}
+	}
+}
+
 
